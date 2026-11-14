@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<base href="/"/>
+<meta charset="utf-8"/>
+<title>Facebook Feed Ad Mockups — CBD Pain Relief</title>
+<style>
+  :root {
+    --bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --border: #dadde1;
+    --text-dark: #050505;
+    --text-gray: #65676b;
+    --domain-gray: #8a8d91;
+    --btn-bg: #e4e6eb;
+    --btn-text: #050505;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  h1 {
+    font-size: 22px;
+    color: var(--text-dark);
+    margin-bottom: 0;
+  }
+  .subtitle {
+    color: var(--text-gray);
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 12px;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    max-width: 1400px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 380px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  }
+  .top-divider {
+    border-top: 1px solid var(--border);
+    margin: 0 16px;
+  }
+  .header-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px 8px 16px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #d0d0d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-dark);
+    flex-shrink: 0;
+    background: #fafafa;
+  }
+  .avatar-logo {
+    width: 64px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #d0d0d0;
+    background: #16233b;
+    padding: 4px;
+    overflow: hidden;
+  }
+  .avatar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .page-info .page-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-dark);
+    text-decoration: underline;
+  }
+  .page-info .sponsored {
+    font-size: 13px;
+    color: var(--text-gray);
+    font-weight: 600;
+    margin-top: 1px;
+  }
+  .primary-text {
+    padding: 4px 16px 12px 16px;
+    font-size: 14.5px;
+    line-height: 1.4;
+    color: var(--text-dark);
+    white-space: pre-line;
+  }
+  .creative img {
+    width: 100%;
+    display: block;
+  }
+  .creative video {
+    width: 100%;
+    display: block;
+  }
+  .link-card {
+    background: #f0f2f5;
+    padding: 10px 16px 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .link-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .link-text .domain {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: var(--domain-gray);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .link-text .headline {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+  }
+  .link-text .description {
+    font-size: 13px;
+    color: var(--text-gray);
+    line-height: 1.35;
+  }
+  .learn-more-btn {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .learn-more-btn:hover,
+  .learn-more-btn:visited,
+  .learn-more-btn:active {
+    color: var(--btn-text);
+    text-decoration: none;
+  }
+
+  .home-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 0 40px 0;
+  }
+  .home-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: -8px;
+  }
+  .home-subtitle {
+    color: var(--text-gray);
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .category-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  .category-tile {
+    width: 320px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .category-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+  .category-tile img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .category-tile-label {
+    padding: 16px;
+  }
+  .category-tile-label .cat-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-dark);
+  }
+  .category-tile-label .cat-count {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-top: 2px;
+  }
+  .category-header {
+    display: none;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .back-btn {
+    background: var(--tag-bg);
+    color: var(--text-dark);
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .back-btn:hover {
+    background: #d8dade;
+  }
+  .category-title-active {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .card-actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 16px 16px 16px;
+  }
+  .dl-btn {
+    flex: 1;
+    text-align: center;
+    background: var(--blue-btn);
+    color: var(--text-dark);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  .dl-btn:hover,
+  .dl-btn:focus,
+  .dl-btn:active,
+  .dl-btn:visited {
+    color: var(--text-dark);
+  }
+  .dl-btn:disabled {
+    color: var(--text-dark);
+    background: var(--blue-btn);
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  .media-filter {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .media-filter-btn {
+    background: var(--tag-bg);
+    color: var(--text-dark);
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  .media-filter-btn.active {
+    background: var(--blue-btn);
+    color: white;
+  }
+  .card-select-label {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+  }
+  .card-select-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--blue-btn);
+  }
+  .bulk-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 16px;
+  }
+  .bulk-actions label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--text-dark);
+    cursor: pointer;
+  }
+  .bulk-download-btn {
+    background: var(--blue-btn);
+    color: var(--text-dark);
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .bulk-download-btn:hover,
+  .bulk-download-btn:focus,
+  .bulk-download-btn:active {
+    color: var(--text-dark);
+  }
+  .bulk-download-btn:disabled {
+    background: var(--btn-bg);
+    color: var(--text-gray);
+    cursor: not-allowed;
+  }
+  .section-tile-placeholder {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    background: linear-gradient(135deg, #eef1f5, #dde2e8);
+  }
+  .back-btn-standalone {
+    margin-bottom: 4px;
+  }
+  .select-filter {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: var(--tag-bg);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="home-wrap" id="homeScreen">
+<div class="home-title">Ad Creative Library</div>
+<div class="home-subtitle">Choose a section to get started</div>
+<div class="category-tiles">
+<div class="category-tile" onclick="showSection('spied')">
+<div class="section-tile-placeholder">🔍</div>
+<div class="category-tile-label">
+<div class="cat-name">Spied Ads</div>
+<div class="cat-count" id="spiedCount">Competitor research — 0 ads yet</div>
+</div>
+</div>
+<div class="category-tile" onclick="showSection('fresh')">
+<div class="section-tile-placeholder">✨</div>
+<div class="category-tile-label">
+<div class="cat-name">Fresh Creatives</div>
+<div class="cat-count" id="freshCount">44 ads across 2 categories</div>
+</div>
+</div>
+</div>
+</div>
+<div class="home-wrap" id="sectionScreen" style="display:none;">
+<button class="back-btn back-btn-standalone" onclick="showHome()">← Back to sections</button>
+<div class="home-title" id="sectionTitle"></div>
+<div class="home-subtitle" id="sectionSubtitle"></div>
+<div class="category-tiles" id="sectionCategoryTiles"></div>
+<div class="no-results" id="sectionNoResults" style="display:none;">No ads in this section yet. Upload competitor ad screenshots to populate it.</div>
+</div>
+<div class="home-wrap" id="brandScreen" style="display:none;">
+<button class="back-btn back-btn-standalone" onclick="backToCategories()">← Back to categories</button>
+<div class="home-title" id="brandTitle"></div>
+<div class="home-subtitle" id="brandSubtitle"></div>
+<div class="category-tiles" id="brandTiles"></div>
+<div class="no-results" id="brandNoResults" style="display:none;">No pages in this category yet.</div>
+</div>
+<div class="category-header" id="categoryHeader">
+<button class="back-btn" onclick="backToBrands()">← Back to pages</button>
+<div class="category-title-active" id="categoryTitleActive"></div>
+<select class="select-filter" id="geoFilter" onchange="setGeoFilter(this.value)">
+<option value="all">All geos</option>
+</select>
+<select class="select-filter" id="sortFilter" onchange="setSortOrder(this.value)" style="display:none;">
+<option value="date-desc">Newest first</option>
+<option value="date-asc">Oldest first</option>
+</select>
+<div class="media-filter">
+<button class="media-filter-btn active" id="filterAll" onclick="setMediaFilter('all')">All</button>
+<button class="media-filter-btn" id="filterImages" onclick="setMediaFilter('image')">Images</button>
+<button class="media-filter-btn" id="filterVideos" onclick="setMediaFilter('video')">Videos</button>
+</div>
+<div class="bulk-actions">
+<label><input id="selectAllCheckbox" onchange="toggleSelectAll(this)" type="checkbox"/> Select All</label>
+<button class="bulk-download-btn" disabled="" id="downloadSelectedBtn" onclick="downloadSelectedZip()">Download Selected (0)</button>
+</div>
+</div>
+<div class="no-results" id="noResults">No ads match this filter.</div>
+<div class="grid">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+  var currentSection = null;
+  var currentCategory = null;
+  var currentBrand = null;
+  var currentMediaFilter = 'all';
+  var currentGeoFilter = 'all';
+  var currentSort = 'none';
+
+  function showHome(skipUrlUpdate) {
+    document.getElementById('homeScreen').style.display = 'flex';
+    document.getElementById('sectionScreen').style.display = 'none';
+    document.getElementById('brandScreen').style.display = 'none';
+    document.getElementById('categoryHeader').style.display = 'none';
+    document.getElementById('noResults').style.display = 'none';
+    document.querySelectorAll('.card').forEach(function(c) { c.style.display = 'none'; });
+    currentSection = null;
+    currentCategory = null;
+    currentBrand = null;
+    currentMediaFilter = 'all';
+    currentGeoFilter = 'all';
+    if (!skipUrlUpdate) updateUrl('/');
+    window.scrollTo(0, 0);
+  }
+
+  var CATEGORY_LABELS = {
+    'raw-files': 'Raw Files',
+    'german-diet': 'German Diet',
+    'weight-loss-supp': 'Weight Loss Supplements',
+    'cbd': 'CBD Pain Relief',
+    'libo': 'Male Enhancement',
+    'skincare': 'Skincare',
+    'joint-pain': 'Joint Pain',
+    'glp1': 'GLP-1 / Weight Loss'
+  };
+
+  function categoryLabel(cat) {
+    return CATEGORY_LABELS[cat] || cat;
+  }
+
+  // /bwupload accepts the public-facing category name ("male-enhancement"), which
+  // is the slug of the internal category's label ("libo" -> "Male Enhancement").
+  // Any card imported under that alias is normalized here so it displays, counts,
+  // and dedupes identically to cards already tagged with the internal category.
+  var CATEGORY_ALIASES = {
+    'male-enhancement': 'libo'
+  };
+
+  function canonicalizeCategory(cat) {
+    return CATEGORY_ALIASES[cat] || cat;
+  }
+
+  function normalizeCardCategories() {
+    document.querySelectorAll('.card').forEach(function(c) {
+      var canonical = canonicalizeCategory(c.dataset.category);
+      if (canonical !== c.dataset.category) {
+        c.dataset.category = canonical;
+      }
+    });
+  }
+
+  function updateHomeCounts() {
+    ['spied', 'fresh'].forEach(function(section) {
+      var cards = document.querySelectorAll('.card[data-section="' + section + '"]');
+      var cats = new Set();
+      cards.forEach(function(c) { cats.add(c.dataset.category); });
+      var el = document.getElementById(section + 'Count');
+      if (el) {
+        el.textContent = cards.length === 0
+          ? (section === 'spied' ? 'Competitor research — 0 ads yet' : '0 ads yet')
+          : cards.length + ' ads across ' + cats.size + ' categor' + (cats.size === 1 ? 'y' : 'ies');
+      }
+    });
+  }
+
+  function buildCategoryTiles(section) {
+    var tilesEl = document.getElementById('sectionCategoryTiles');
+    tilesEl.innerHTML = '';
+    var cardsInSection = document.querySelectorAll('.card[data-section="' + section + '"]');
+    var categories = {};
+    cardsInSection.forEach(function(c) {
+      var cat = c.dataset.category;
+      if (!categories[cat]) categories[cat] = { total: 0, images: 0, videos: 0, thumb: null };
+      categories[cat].total++;
+      if (c.dataset.mediaType === 'video') {
+        categories[cat].videos++;
+      } else {
+        categories[cat].images++;
+      }
+      if (!categories[cat].thumb) {
+        var img = c.querySelector('.creative img');
+        var video = c.querySelector('.creative video');
+        if (img) {
+          categories[cat].thumb = img.getAttribute('data-src');
+        } else if (video && video.getAttribute('data-poster')) {
+          categories[cat].thumb = video.getAttribute('data-poster');
+        }
+      }
+    });
+
+    Object.keys(categories).sort().forEach(function(cat) {
+      var info = categories[cat];
+      var tile = document.createElement('div');
+      tile.className = 'category-tile';
+      tile.onclick = function() { showCategory(cat); };
+
+      if (cat === 'libo') {
+        var placeholder = document.createElement('div');
+        placeholder.className = 'section-tile-placeholder';
+        placeholder.textContent = '🍆';
+        tile.appendChild(placeholder);
+      } else if (info.thumb) {
+        var img = document.createElement('img');
+        img.src = info.thumb;
+        img.alt = categoryLabel(cat);
+        tile.appendChild(img);
+      } else {
+        var placeholder = document.createElement('div');
+        placeholder.className = 'section-tile-placeholder';
+        placeholder.textContent = '🎬';
+        tile.appendChild(placeholder);
+      }
+
+      var labelDiv = document.createElement('div');
+      labelDiv.className = 'category-tile-label';
+      var nameDiv = document.createElement('div');
+      nameDiv.className = 'cat-name';
+      nameDiv.textContent = categoryLabel(cat);
+      var countDiv = document.createElement('div');
+      countDiv.className = 'cat-count';
+      var parts = [];
+      if (info.images > 0) parts.push(info.images + ' images');
+      if (info.videos > 0) parts.push(info.videos + ' videos');
+      countDiv.textContent = info.total + ' ads · ' + parts.join(' · ');
+      labelDiv.appendChild(nameDiv);
+      labelDiv.appendChild(countDiv);
+      tile.appendChild(labelDiv);
+
+      tilesEl.appendChild(tile);
+    });
+  }
+
+  function buildBrandTiles(section, cat) {
+    var tilesEl = document.getElementById('brandTiles');
+    tilesEl.innerHTML = '';
+    var cardsInCat = document.querySelectorAll('.card[data-section="' + section + '"][data-category="' + cat + '"]');
+    var pages = {};
+    cardsInCat.forEach(function(c) {
+      var page = c.dataset.page || 'Unknown';
+      if (!pages[page]) pages[page] = { total: 0, images: 0, videos: 0, thumb: null, geos: new Set() };
+      pages[page].total++;
+      if (c.dataset.mediaType === 'video') {
+        pages[page].videos++;
+      } else {
+        pages[page].images++;
+      }
+      if (c.dataset.geo) pages[page].geos.add(c.dataset.geo);
+      if (!pages[page].thumb) {
+        var img = c.querySelector('.creative img');
+        var video = c.querySelector('.creative video');
+        if (img) {
+          pages[page].thumb = img.getAttribute('data-src');
+        } else if (video && video.getAttribute('data-poster')) {
+          pages[page].thumb = video.getAttribute('data-poster');
+        }
+      }
+    });
+
+    Object.keys(pages).sort().forEach(function(page) {
+      var info = pages[page];
+      var tile = document.createElement('div');
+      tile.className = 'category-tile';
+      tile.onclick = function() { showBrand(page); };
+
+      if (info.thumb) {
+        var img = document.createElement('img');
+        img.src = info.thumb;
+        img.alt = page;
+        tile.appendChild(img);
+      } else {
+        var placeholder = document.createElement('div');
+        placeholder.className = 'section-tile-placeholder';
+        placeholder.textContent = '🎬';
+        tile.appendChild(placeholder);
+      }
+
+      var labelDiv = document.createElement('div');
+      labelDiv.className = 'category-tile-label';
+      var nameDiv = document.createElement('div');
+      nameDiv.className = 'cat-name';
+      nameDiv.textContent = page;
+      var countDiv = document.createElement('div');
+      countDiv.className = 'cat-count';
+      var parts = [];
+      if (info.images > 0) parts.push(info.images + ' images');
+      if (info.videos > 0) parts.push(info.videos + ' videos');
+      var geoStr = info.geos.size > 0 ? ' · ' + Array.from(info.geos).sort().join('/') : '';
+      countDiv.textContent = info.total + ' ads · ' + parts.join(' · ') + geoStr;
+      labelDiv.appendChild(nameDiv);
+      labelDiv.appendChild(countDiv);
+      tile.appendChild(labelDiv);
+
+      tilesEl.appendChild(tile);
+    });
+  }
+
+  function showSection(section, skipUrlUpdate) {
+    currentSection = section;
+    document.getElementById('homeScreen').style.display = 'none';
+    document.getElementById('brandScreen').style.display = 'none';
+    document.getElementById('categoryHeader').style.display = 'none';
+    document.getElementById('sectionScreen').style.display = 'flex';
+
+    var titleEl = document.getElementById('sectionTitle');
+    var subEl = document.getElementById('sectionSubtitle');
+    var noResultsEl = document.getElementById('sectionNoResults');
+
+    if (section === 'spied') {
+      titleEl.textContent = 'Spied Ads';
+      subEl.textContent = 'Competitor ad research — select a category, then a page';
+    } else {
+      titleEl.textContent = 'Fresh Creatives';
+      subEl.textContent = 'Ads you\'ve created — select a category, then a page';
+    }
+
+
+    buildCategoryTiles(section);
+    var hasAnyCards = document.querySelectorAll('.card[data-section="' + section + '"]').length > 0;
+    document.getElementById('sectionCategoryTiles').style.display = hasAnyCards ? 'flex' : 'none';
+    noResultsEl.style.display = hasAnyCards ? 'none' : 'block';
+
+    if (!skipUrlUpdate) updateUrl('/' + section);
+    window.scrollTo(0, 0);
+  }
+
+
+  function backToCategories() {
+    showSection(currentSection);
+  }
+
+  function showCategory(cat, skipUrlUpdate) {
+    currentCategory = cat;
+    document.getElementById('homeScreen').style.display = 'none';
+    document.getElementById('sectionScreen').style.display = 'none';
+    document.getElementById('categoryHeader').style.display = 'none';
+    document.getElementById('brandScreen').style.display = 'flex';
+
+    document.getElementById('brandTitle').textContent = categoryLabel(cat);
+    document.getElementById('brandSubtitle').textContent =
+      'Select a page to view its ads' + (currentSection === 'spied' ? ' — Spied Ads' : ' — Fresh Creatives');
+
+    buildBrandTiles(currentSection, cat);
+    var hasAnyCards = document.querySelectorAll('.card[data-section="' + currentSection + '"][data-category="' + cat + '"]').length > 0;
+    document.getElementById('brandTiles').style.display = hasAnyCards ? 'flex' : 'none';
+    document.getElementById('brandNoResults').style.display = hasAnyCards ? 'none' : 'block';
+
+    if (!skipUrlUpdate) updateUrl('/' + currentSection + '/' + slugify(categoryLabel(cat)));
+    window.scrollTo(0, 0);
+  }
+
+
+  function backToBrands() {
+    showCategory(currentCategory);
+  }
+
+  function populateGeoFilter() {
+    var select = document.getElementById('geoFilter');
+    select.innerHTML = '<option value="all">All geos</option>';
+    var geos = new Set();
+    document.querySelectorAll('.card[data-section="' + currentSection + '"][data-category="' + currentCategory + '"][data-page="' + currentBrand + '"]').forEach(function(c) {
+      if (c.dataset.geo) geos.add(c.dataset.geo);
+    });
+    if (geos.size === 0) {
+      select.style.display = 'none';
+    } else {
+      select.style.display = '';
+      Array.from(geos).sort().forEach(function(geo) {
+        var opt = document.createElement('option');
+        opt.value = geo;
+        opt.textContent = geo;
+        select.appendChild(opt);
+      });
+    }
+  }
+
+  function hydrateBrand(section, cat, brand) {
+    var cards = document.querySelectorAll(
+      '.card[data-section="' + section + '"][data-category="' + cat + '"][data-page="' + brand + '"]'
+    );
+    cards.forEach(function(card) {
+      if (card.dataset.hydrated === 'true') return;
+
+      var img = card.querySelector('.creative img');
+      if (img && img.dataset.src) {
+        img.src = img.dataset.src;
+      }
+
+      var video = card.querySelector('.creative video');
+      if (video) {
+        var source = video.querySelector('source');
+        if (source && source.dataset.src) {
+          source.src = source.dataset.src;
+        }
+        if (video.dataset.poster) {
+          video.poster = video.dataset.poster;
+        }
+        video.load();
+      }
+
+      card.dataset.hydrated = 'true';
+    });
+  }
+
+  function showBrand(brand, skipUrlUpdate) {
+    currentBrand = brand;
+    document.getElementById('homeScreen').style.display = 'none';
+    document.getElementById('sectionScreen').style.display = 'none';
+    document.getElementById('brandScreen').style.display = 'none';
+    document.getElementById('categoryHeader').style.display = 'flex';
+    document.getElementById('categoryTitleActive').textContent =
+      brand + ' — ' + categoryLabel(currentCategory) + (currentSection === 'spied' ? ' (Spied)' : ' (Fresh)');
+    currentMediaFilter = 'all';
+    currentGeoFilter = 'all';
+    document.getElementById('selectAllCheckbox').checked = false;
+    populateGeoFilter();
+    document.getElementById('geoFilter').value = 'all';
+    updateFilterButtons();
+
+    hydrateBrand(currentSection, currentCategory, brand);
+
+    var sortSelect = document.getElementById('sortFilter');
+    if (currentSection === 'spied') {
+      sortSelect.style.display = '';
+      currentSort = 'date-desc';
+      sortSelect.value = 'date-desc';
+    } else {
+      sortSelect.style.display = 'none';
+      currentSort = 'none';
+    }
+    applySort();
+    applyFilters();
+    if (!skipUrlUpdate) updateUrl('/' + slugify(brand));
+    window.scrollTo(0, 0);
+  }
+
+
+  function setSortOrder(value) {
+    currentSort = value;
+    applySort();
+  }
+
+  function applySort() {
+    var grid = document.querySelector('.grid');
+    var cards = Array.from(grid.querySelectorAll('.card'));
+    cards.sort(function(a, b) {
+      if (currentSort === 'date-asc' || currentSort === 'date-desc') {
+        var da = a.dataset.date || '';
+        var db = b.dataset.date || '';
+        if (da === db) {
+          return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+        }
+        return currentSort === 'date-asc' ? da.localeCompare(db) : db.localeCompare(da);
+      }
+      return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+    });
+    cards.forEach(function(c) { grid.appendChild(c); });
+  }
+
+  function setMediaFilter(type) {
+    currentMediaFilter = type;
+    updateFilterButtons();
+    applyFilters();
+  }
+
+  function setGeoFilter(geo) {
+    currentGeoFilter = geo;
+    applyFilters();
+  }
+
+  function updateFilterButtons() {
+    document.getElementById('filterAll').classList.toggle('active', currentMediaFilter === 'all');
+    document.getElementById('filterImages').classList.toggle('active', currentMediaFilter === 'image');
+    document.getElementById('filterVideos').classList.toggle('active', currentMediaFilter === 'video');
+  }
+
+  function applyFilters() {
+    var visibleCount = 0;
+    document.querySelectorAll('.card').forEach(function(c) {
+      var matchesSection = c.dataset.section === currentSection;
+      var matchesCategory = c.dataset.category === currentCategory;
+      var matchesBrand = c.dataset.page === currentBrand;
+      var matchesMedia = (currentMediaFilter === 'all') || (c.dataset.mediaType === currentMediaFilter);
+      var matchesGeo = (currentGeoFilter === 'all') || (c.dataset.geo === currentGeoFilter);
+      var show = matchesSection && matchesCategory && matchesBrand && matchesMedia && matchesGeo;
+      c.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+    document.getElementById('noResults').style.display = (visibleCount === 0) ? 'block' : 'none';
+    updateSelectedCount();
+  }
+
+  function toggleSelectAll(checkbox) {
+    document.querySelectorAll('.card').forEach(function(c) {
+      if (c.style.display !== 'none') {
+        var cb = c.querySelector('.card-select-checkbox');
+        if (cb) cb.checked = checkbox.checked;
+      }
+    });
+    updateSelectedCount();
+  }
+
+  function updateSelectedCount() {
+    var visibleChecked = 0;
+    document.querySelectorAll('.card').forEach(function(c) {
+      if (c.style.display !== 'none') {
+        var cb = c.querySelector('.card-select-checkbox');
+        if (cb && cb.checked) visibleChecked++;
+      }
+    });
+    var btn = document.getElementById('downloadSelectedBtn');
+    if (btn) {
+      btn.textContent = 'Download Selected (' + visibleChecked + ')';
+      btn.disabled = (visibleChecked === 0);
+    }
+  }
+
+  function getMediaInfo(card) {
+    var img = card.querySelector('.creative img');
+    var videoSource = card.querySelector('.creative video source');
+    if (img) {
+      return { src: img.getAttribute('src'), ext: 'jpg' };
+    } else if (videoSource) {
+      return { src: videoSource.getAttribute('src'), ext: 'mp4' };
+    }
+    return null;
+  }
+
+  function getCaptionsText(card) {
+    var raw = card.dataset.adText || '';
+    return raw.replace(/\\n/g, '\n');
+  }
+
+  async function addAdToZip(zip, card, useFolder) {
+    var media = getMediaInfo(card);
+    var filenameBase = card.dataset.filename || 'ad';
+    var target = useFolder ? zip.folder(filenameBase) : zip;
+
+    if (media) {
+      var response = await fetch(media.src);
+      var blob = await response.blob();
+      target.file(filenameBase + '.' + media.ext, blob);
+    }
+
+    var captions = getCaptionsText(card);
+    target.file((useFolder ? 'captions' : filenameBase + '-captions') + '.txt', captions);
+  }
+
+  function triggerDownload(blob, filename) {
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  async function downloadSingleAdZip(btn) {
+    var card = btn.closest('.card');
+    var originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Preparing...';
+    try {
+      var zip = new JSZip();
+      await addAdToZip(zip, card, false);
+      var blob = await zip.generateAsync({ type: 'blob' });
+      triggerDownload(blob, (card.dataset.filename || 'ad') + '.zip');
+    } catch (e) {
+      alert('Download failed: ' + e.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = originalText;
+    }
+  }
+
+  async function downloadSelectedZip() {
+    var checkedBoxes = [];
+    document.querySelectorAll('.card').forEach(function(c) {
+      if (c.style.display !== 'none') {
+        var cb = c.querySelector('.card-select-checkbox');
+        if (cb && cb.checked) checkedBoxes.push(c);
+      }
+    });
+    if (checkedBoxes.length === 0) return;
+
+    var btn = document.getElementById('downloadSelectedBtn');
+    var originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Preparing ZIP (0/' + checkedBoxes.length + ')...';
+
+    try {
+      var zip = new JSZip();
+      for (var i = 0; i < checkedBoxes.length; i++) {
+        await addAdToZip(zip, checkedBoxes[i], true);
+        btn.textContent = 'Preparing ZIP (' + (i + 1) + '/' + checkedBoxes.length + ')...';
+      }
+      var blob = await zip.generateAsync({ type: 'blob' });
+      var zipName = (currentCategory || 'ads') + '-selected-' + checkedBoxes.length + '.zip';
+      triggerDownload(blob, zipName);
+    } catch (e) {
+      alert('Download failed: ' + e.message);
+    } finally {
+      updateSelectedCount();
+    }
+  }
+
+  // ---- URL routing ----
+  function slugify(str) {
+    return String(str).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function updateUrl(path) {
+    if (window.location.pathname !== path) {
+      history.pushState({ path: path }, '', path);
+    }
+  }
+
+  function buildBrandSlugMap() {
+    var map = {};
+    document.querySelectorAll('.card').forEach(function(c) {
+      var page = c.dataset.page;
+      if (!page) return;
+      var slug = slugify(page);
+      if (!map[slug]) {
+        map[slug] = { section: c.dataset.section, category: c.dataset.category, brand: page };
+      }
+    });
+    return map;
+  }
+
+  function buildCategorySlugMap() {
+    var map = {};
+    Object.keys(CATEGORY_LABELS).forEach(function(cat) {
+      map[slugify(categoryLabel(cat))] = cat;
+    });
+    return map;
+  }
+
+  function routeFromLocation() {
+    var path = window.location.pathname.replace(/\/+$/, '');
+    var segments = path.split('/').filter(Boolean);
+
+    if (segments.length === 0) {
+      showHome(true);
+      return;
+    }
+
+    if (segments.length === 1) {
+      var seg = segments[0];
+      if (seg === 'spied' || seg === 'fresh') {
+        showSection(seg, true);
+        return;
+      }
+      // Try matching a brand slug directly (e.g. /quad)
+      var brandMap = buildBrandSlugMap();
+      var match = brandMap[seg];
+      if (match) {
+        currentSection = match.section;
+        currentCategory = match.category;
+        showBrand(match.brand, true);
+        return;
+      }
+      // Unknown path — fall back to home
+      showHome(true);
+      return;
+    }
+
+    if (segments.length === 2) {
+      var section = segments[0];
+      var catSlug = segments[1];
+      if (section === 'spied' || section === 'fresh') {
+        var catMap = buildCategorySlugMap();
+        var cat = catMap[catSlug];
+        if (cat && document.querySelectorAll('.card[data-section="' + section + '"][data-category="' + cat + '"]').length > 0) {
+          currentSection = section;
+          showCategory(cat, true);
+          return;
+        }
+      }
+    }
+
+    // Anything else unrecognized — fall back to home
+    showHome(true);
+  }
+
+  window.addEventListener('popstate', function() {
+    routeFromLocation();
+  });
+
+  // Initial state: route based on current URL (supports direct links like /quad)
+  normalizeCardCategories();
+  updateHomeCounts();
+  routeFromLocation();
+</script>
+</body>
+</html>
